@@ -10,7 +10,13 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { useCollectionData } from 'react-firebase-hooks/firestore';
 
 firebase.initializeApp({
-  // your config
+     apiKey: "AIzaSyDn2Ok63a_zJZrONv0FoClsZEsaioUiwLo",
+    authDomain: "chat-app-282ed.firebaseapp.com",
+    projectId: "chat-app-282ed",
+    storageBucket: "chat-app-282ed.appspot.com",
+    messagingSenderId: "1021414751252",
+    appId: "1:1021414751252:web:48751a6a281c8799babb01",
+    measurementId: "G-F2VYQ55V9B"
 })
 
 const auth = firebase.auth();
@@ -40,6 +46,7 @@ function App() {
 function SignIn() {
 
   const signInWithGoogle = () => {
+      console.log("Sign in with Google...")
     const provider = new firebase.auth.GoogleAuthProvider();
     auth.signInWithPopup(provider);
   }
